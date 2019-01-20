@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Registration</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script language="javascript">
+            function checklength(){
+            var t1=document.getElementById("t1");
+            if(t1.value.length>=5 && t1.value.length<=10)
+            {
+                return 0;
+            }
+            else{
+                alert("Please Enter Title correctly")
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <form name="register">
+            <h2>COURSE REGISTRATION FORM</h2>
+             <table border="1">
+            <thead>
+                <tr>
+                    <th colspan="2"> Training Course</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2"><input type="text" id="t1" name="title" value="" placeholder="Title" maxlength="20" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" name="name" value="" placeholder="Full Name"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" name="post" value="" placeholder="Position"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" name="comp" value="" placeholder="Company"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" name="email" value="" placeholder="Email"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" name="addr1" value="" placeholder="Street Address" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" name="addr2" value="" placeholder="Street Address Line2"/></td>
+                </tr>
+                <tr>
+                    <td><select name="coun">
+                            <option value="" disabled selected>Choose your country</option>
+                            <option value="India">India</option>
+                            <option value="America">America</option>
+                            <option value="Japan">Japan</option>
+                            <option value="China">China</option>
+                        </select></td>
+                        <td><input type="text" name="city" value="" placeholder="City"/></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="state" value="" placeholder="State/region" /></td>
+                    <td><input type="text" name="zip" value="" placeholder="Zip/postal code"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" name="pno" value="" placeholder="Phone Number" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Submit" name="button" /></td>
+                </tr>
+            </tbody>
+        </table>
+        </form>
+    </body>
+</html>

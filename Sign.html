@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body, html {
+                background: url(css2.jpg);
+                background-size:cover;
+                background-attachment: fixed;
+                background-position: center;
+                font-family: Verdana,Arial, Helvetica, sans-serif;
+                padding:80px 20px;
+            }
+            .sign{
+
+
+                width:250px;
+                height: auto;
+                margin: auto;
+                margin-top: 10%;
+
+            }
+            
+            .sign input[type="submit"]:hover{
+                cursor: pointer;
+                
+            }
+
+
+            form.sign{
+                width:800px;
+                margin: 20px auto 0px auto;
+                height:980px;
+                background-color:#fff;
+                padding:5px;
+
+            }
+        </style>
+
+        <script type="text/javascript">
+            function validate()
+            {
+                if (document.form1.username.value == "")
+                {
+                    alert("Enter Your Username.");
+                    document.form1.username.focus();
+                    return false;
+                }
+                if (document.form1.pass.value == "")
+                {
+                    alert("Enter Your Password");
+                    document.form1.password.focus();
+                    return false;
+                }
+                if (document.form1.username.value == "demo" && document.form1.pass.value == "demo")
+                {
+                    alert("Login SuccessFul");
+                    return true;
+                }
+                else
+                {
+                    alert("Enter Correct login Cerentials")
+                    return false;
+                }
+
+            }
+        </script>
+
+    </head>
+    <body>
+        <div class="sign">
+
+            <form name="form1" action="Sign.html" onsubmit="return validate();" method="POST" class="sign">
+                <div>
+                    <span style="text-align: center;">
+                        LOG IN
+                    </span>
+                </div>
+                <div>
+                    <input type="text" name="username" placeholder="Username" >
+                </div>
+                <div>
+                    <input type="password" name="pass" placeholder="Password" >
+                </div>
+                <div>
+                    <input type="checkbox" name="rememberme">
+                    <label >
+                        Remember me
+                    </label>
+                </div>
+                <div>
+                    <input type="submit" value="Login" name="sub" />
+                </div>
+                <div>
+                    <a href="fp.html">
+                        Forgot Password?
+                    </a>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
+
+

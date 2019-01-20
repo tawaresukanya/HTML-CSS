@@ -1,0 +1,212 @@
+<html>
+    <head>
+        <title>
+            Registration
+        </title>
+        <link rel='stylesheet' href='css2.css' type='text/css' />
+        <script type="text/javascript">
+            function valtitle()
+            {
+                var letters = /^[A-Za-z]+$/;
+                var title = document.form1.title.value;
+                if ((title.match(letters)) && (title.length > 6 || title.length < 20))
+                {
+                    return true;
+                }
+                else
+                {
+                    alert('Please enter  alphabet characters of length 6-20 characters for title');
+                    return false;
+                }
+            }
+
+            function valname()
+            {
+                var name = document.form1.full.value;
+                var letters = /^[A-Za-z]+$/;
+                if ((name.match(letters)) && (name.length > 2 || name.length < 30))
+                {
+                    return true;
+                }
+                else
+                {
+                    alert('Enter Full Name with correct length');
+                    return false;
+                }
+            }
+            
+            function valposit()
+            {
+                
+                var posit = document.form1.position.value;
+                var letters = /^[A-Za-z]+$/;
+                if ((posit.match(letters)) && (posit.length > 2 || posit.length < 11))
+                {
+                    return true;
+                }
+                else
+                {
+                    alert('Enter Position with correct length');
+                    return false;
+                }
+            }
+            
+            function valcomp()
+            {
+                var comp = document.form1.comp.value;
+                var letters = /^[A-Za-z]+$/;
+                if (comp.match(letters))
+                {
+                    return true;
+                }
+                else
+                {
+                    alert('Enter Correct Company Name');
+                    return false;
+                }
+            }
+            
+            function valaddr()
+            {
+                
+                var addr = document.form1.addr.value;
+                var letters = /^[A-Za-z]+$/;
+                if ((addr.match(letters)) && (addr.length > 2 || addr.length < 25))
+                {
+                    return true;
+                }
+                else
+                {
+                    alert('Enter Address with correct length');
+                    return false;
+                }
+            }
+            
+            function valcity()
+            {
+                var city = document.form1.city.value;
+                var letters = /^[A-Za-z]+$/;
+                if ((city.match(letters)) && (city.length > 2 || city.length < 16))
+                {
+                    return true;
+                }
+                else
+                {
+                    alert('Enter City with correct length');
+                    return false;
+                }
+            }
+            
+            function valstate()
+            {
+                var state = document.form1.state.value;
+                var letters = /^[A-Za-z]+$/;
+                if ((state.match(letters)) && (addr.length > 2 || addr.length < 25))
+                {
+                    return true;
+                }
+                else
+                {
+                    alert('Enter State with correct length');
+                    return false;
+                }
+            }
+            
+            function validate()
+            {
+                if (document.form1.title.value == "")
+                {
+                    alert("Enter Your Title.");
+                    document.form1.title.focus();
+                    return false;
+                }
+
+                if (document.form1.full.value == "")
+                {
+                    alert("Enter Your Full Name");
+                    document.form1.full.focus();
+                    return false;
+                }
+
+                if (document.form1.position.value == "")
+                {
+                    alert("Enter Your Position");
+                    document.form1.position.focus();
+                    return false;
+                }
+
+                if (document.form1.email.value == "")
+                {
+                    alert("Enter Your Email");
+                    document.form1.email.focus();
+                    return false;
+                }
+
+                if (document.form1.addr1.value == "")
+                {
+                    alert("Enter Your Street Address");
+                    document.form1.addr1.focus();
+                    return false;
+                }
+
+                if (document.form1.city.value == "")
+                {
+                    alert("Enter Your City");
+                    document.form1.city.focus();
+                    return false;
+                }
+
+                if (document.form1.state.value == "")
+                {
+                    alert("Enter Your State");
+                    document.form1.state.focus();
+                    return false;
+                }
+
+                if (document.form1.zip.value == "")
+                {
+                    alert("Enter Your Zip");
+                    document.form1.zip.focus();
+                    return false;
+                }
+
+                if (document.form1.pno.value == "")
+                {
+                    alert("Enter Your Phone No");
+                    document.form1.pno.focus();
+                    return false;
+                }
+
+            }
+
+
+        </script>
+    </head>
+    <body>
+        <h1>COURSE REGISTRATION FORM</h1>
+        <div class="reg">
+                <form name="form1" onsubmit="return validate();" id="reg" onaction="reg.html" method="POST">
+                <h2>TRAINING COURSE</h2>
+                <input type="text" name="title" placeholder="Title" class="name"><br><br>
+                <input type="text" name="full" placeholder="Full Name" class="name"onclick="return valtitle();" ><br><br>
+                <input type="text" name="position" placeholder="Position" class="name" onclick="return val"/><br><br>
+                <input type="text" name="comp" placeholder="Company" maxlength="50" class="name"/><br><br>
+                <input type="email" name="email" placeholder="Email" class="name" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, }$"/><br><br>
+                <input type="text" name="addr1" placeholder="Street Address" class="name" /><br><br>
+                <input type="text" name="addr2" placeholder="Street Address Line2" class="name" /><br><br>
+                <select name="country" class="name">
+                        <option>India</option>
+                        <option>China</option>
+                        <option>Japan</option>
+                        <option>Korea</option>
+                    </select><br><br>
+                <input type="text" name="city" placeholder="City" class="name"/><br><br>
+                <input type="text" name="state" placeholder="State/region" class="name"/><br><br>
+                <input type="text" name="zip" class="name" placeholder="Zip/postal code" pattern="[0-9]{5}"/><br><br>
+                <input type="text" name="pno" class="name" placeholder="Phone Number" pattern="[789][0-9]{9}" /><br><br>
+                <input type="submit" name="" id="sub" value="Login" style="text-align:center;"><br><br>
+          
+            </form>
+        </div>
+    </body>
+</html>
